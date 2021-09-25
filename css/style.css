@@ -15,6 +15,8 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 100;
+    background-color: transparent;
 }
 
 .headercontainer{
@@ -39,7 +41,7 @@ header {
     display: inline;
     padding: 20px 30px;
     flex-grow: 1;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     border-radius: 10px;
     background-image: linear-gradient(to right,#f55f8d 0%,#f8ae56 51%,#f55f8d 100%);
     transition: all 0.5s;
@@ -236,37 +238,39 @@ header {
 }
 .about__content{
     display: flex;
-    width: 70%;
+    width: 60%;
     margin: auto;
     position: relative;
 }
 .about__img{
-    width: 48%;
+    width: 50%;
+    height: auto;
 }
 .about__img img{
-    height: 100%;
+    width: 80%;
+    height: auto;
     position: absolute;
     border-radius: 0 100px 100px 0;
     top: 0px;
-    left: -25%;
+    left: -40%;
 }
 .about__bg{
     background-color: #fef2f6;
-    width: 70%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0px;
-    left: -28%;
-    transform: rotate(8deg);
+    left: -57%;
+    transform: rotate(12deg);
     border-radius: 0 100px 100px 0;
     z-index: -1;
 }
 .about__txt{
-    width: 43%;
+    width: 50%;
     text-align: left;
 }
 .about__txt p:nth-of-type(1){
-    color: #f55f8d;;
+    color: #f55f8d;
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
@@ -288,7 +292,7 @@ header {
 .about__txt li{
     list-style-type:none;
     vertical-align: middle;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .about__txt li::before{
     vertical-align: middle;
@@ -579,16 +583,123 @@ header {
 .portfolio__item.item6{
     grid-area: item6;
 }
-
-
-
-
-
-
-
-
-
-
+/* PLAN */
+.plan{
+    padding-top: 115px;
+    background-image: url(../img/bg16.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.plan__container{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.plan__select{
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,#f55f8d 0,#f8ae56 51%,#f55f8d 100%);;
+    display: flex;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 50px;
+    width: 235px;
+    background-size: 200%;
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 20px 0 rgba(245, 95, 141, 0.1);;
+}
+.plan__select span{
+    text-align: center;
+    width: 100%;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    color: white;
+    cursor: pointer;
+}
+.plan__select span:nth-of-type(1){
+    color: black;
+    background-color: white;
+    border-radius: 6px;
+}
+.plan__wrap{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+}
+.plan__content{
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 1px 0 50px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    padding: 20px 20px;
+    border: 3px solid transparent;
+    border-image: 100 round;
+    transition: all .5s;
+}
+.plan__content:hover{
+    border-image: url(../img/br.png) 1 round;
+}
+.plan__img h4{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 15px;
+}
+.plan__img img{
+    width: 50%;
+    padding-bottom: 15px;
+}
+.plan__img p{
+    font-size: 18px;
+    color: #262626;
+    font-weight: 600;
+}
+.plan__img span{
+    margin-bottom: 25px;
+    color: #f8ae56;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+.plan__detail{
+    width: 75%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #E1E1F0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+.plan__detail li{
+    list-style: none;
+    text-align: left;
+    padding: 5px 0 5px 0px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #262626;
+}
+.plan__detail i{
+    display: inline;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    background-color: #feeff3;
+    background-size: 200%;
+    font-weight: 800;
+    text-align: center;
+    line-height: 15px;
+    color:#f55f8d;
+    border-radius: 35px;
+    margin-right: 10px;
+    padding: 6px 6px;
+}
 
 
 
