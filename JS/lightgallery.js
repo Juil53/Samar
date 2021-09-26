@@ -9,3 +9,5 @@ lightGallery(document.getElementById("img-thumbnails"), {
     actualSize: false,
     exThumbImage: "data-exthumbimage"
   });
+
+  // SWIPER JS
