@@ -9,7 +9,7 @@ var testimonialThumbs = new Swiper(".testimonial-thumbs", {
   slidesPerView: 3,
   centeredSlides: true,
   freeMode: true,
-  // autoplay: true,
+  autoplay: true,
   loop: true,
   speed: 3000,
   pagination: {
@@ -19,7 +19,7 @@ var testimonialThumbs = new Swiper(".testimonial-thumbs", {
 });
 var testimonialContent = new Swiper(".testimonial-comment", {
   spaceBetween: 10,
-  // autoplay: true,
+  autoplay: true,
   loop: true,
   speed: 3000,
   thumbs: {
