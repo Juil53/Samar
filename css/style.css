@@ -731,12 +731,11 @@ header {
     height: 170px;
     margin: auto;
     text-align: center;
-    /* padding: 100px 0; */
 }
 .swiper-slide {
+    width: 1170px;
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -759,12 +758,17 @@ header {
     z-index: 2;
     background-color: pink;
 }
-.testimonial-thumbs {
+.testimonial-thumbs{
     width: 400px;
     margin: auto;
 }
+/* CHƯA HOẠT ĐỘNG */
+/* .testimonial-thumbs::before,.testimonial-thumbs::after{
+    content: "";
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+} */
 .testimonial-comment .swiper-wrapper {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 .testimonial-thumbs .testimonial-pic {
     padding: 30px 0 0;
@@ -773,10 +777,73 @@ header {
 .testimonial-thumbs .swiper-slide-thumb-active .testimonial-pic {
     padding: 0 0 40px;
 }
+.testimonial-content .testimonial-thumbs .testimonial-pic .shape-bx{
+    position: relative;
+    height: 35px;
+    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+/* .testimonial-content.testimonial-thumbs.swiper-slide-thumb-active.testimonial-pic.shape-bx{
+    opacity: 1;
+}
+.testimonial__content .testimonial-thumbs .testimonial-pic::before{
+    content: "";
+    height: 15px;
+    width: 15px;
+    bottom: 20px;
+}
+.testimonial__content .testimonial-thumbs .testimonial-pic::after{
+    content: "";
+    background-color: red;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+} */
 
-  
-
-
+.swiper.testimonial-comment{
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+}
+.testimonial-name{
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    line-height: 26px;
+    margin-bottom: 5px;  
+}
+.testimonial-text{
+    height: 100%;
+}
+.testimonial-text span{
+    color: red;
+    margin-bottom: 30px !important;
+}
+.testimonial__quote{
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px 0 rgb(0 0 0 / 10%);
+    margin: 20px 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.test .swiper-pagination-bullet-active{
+    background-color:#f55f8d;
+}
 /* BLOG   */
 .blog{
     text-align: center;
@@ -867,9 +934,142 @@ header {
     margin: auto;
 }
 .logo__img{
-    width: 120px;
+    width: 90%;
+    padding: 20px 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 1s;
+}
+.logo__img img{
+    width: auto !important;
     margin: auto;
 }
+.logo-main{
+    width: auto;
+    margin: auto;
+}
+.logo-hover{
+    display: none !important;
+}
+.logo-carousel .logo__img{
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.logo__img:hover{
+    background:linear-gradient(to right,#f55f8d 0,#f8ae56 51%,#f55f8d 100%);
+    background-size: 200%;
+    background-position: left center;
+    cursor: pointer;
+}
+.logo-carousel .logo__img:hover{
+    box-shadow: 5px 0 30px 0 rgba(245, 95, 141, 0.5);
+}
+.logo__img:hover .logo-main{
+    display: none !important;
+}
+.logo__img:hover .logo-hover{
+    display: block !important;
+}
+/* END LOGO */
+/* SUBCRIBE */
+.subcribe{
+    width: 100%;
+    background-image: url(../img/bg4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: auto !important;
+    background-color: #0e1b1f;
+    background-size: contain;
+    color: #fff;
+    font-size: 15px;
+    padding-top: 115px;
+}
+.subcribe::before{
+    content: "";
+    background-image:url(../img/pattern2.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sub__content{
+    width: 60%;
+    margin: auto;
+}
+.sub__content .top{
+    width: 100%;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:0 0px 30px 0 rgb(0 0 0 / 10%);
+    background-image: url(../img/pattern3.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    line-height: 20px;
+    vertical-align: middle;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.sub__content .top h2{
+    font-size: 28px;
+    color: #262626;
+    font-weight: 700;
+    line-height: 20px;
+}
+.sub__content .top form{
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0px 60px 0 rgb(0 0 0 / 10%) !important;
+}
+.sub__content .top .typehere{
+    height: 60px;
+    width: 85%;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #888;
+    background: #fff;
+    border-radius: 10px 0 0 10px;
+    border:  1px solid white;
+}
+.sub__content .top .submit{
+    height: 60px;
+    width: 15%;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid white;
+    background:linear-gradient(to right,#f55f8d 0,#f8ae56 51%,#f55f8d 100%);
+    background-size: 200%;
+    background-position: left center;
+    transition: all .5s;
+}
+.sub__content .top .submit i{
+    color: white;
+    font-size: 25px;
+}
+.sub__content .top .submit:hover i{
+    animation: leftToRight .5s;
+}
+.sub__content .top .submit:hover{
+    background:linear-gradient(to right,#f55f8d 0,#f8ae56 51%,#f55f8d 100%);
+    background-size: 200%;
+    background-position: right center;
+}
+
 /* KEYFRAMES */
 @keyframes upToDown{
     49% {
@@ -877,6 +1077,18 @@ header {
     }
     50% {
         transform: translateY(-100%);
+        opacity: 0;
+    }
+    51% {
+        opacity: 1;
+    }
+}
+@keyframes leftToRight{
+    49% {
+        transform: translateX(100%);
+    }
+    50% {
+        transform: translateX(-100%);
         opacity: 0;
     }
     51% {

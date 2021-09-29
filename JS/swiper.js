@@ -11,7 +11,11 @@ var testimonialThumbs = new Swiper(".testimonial-thumbs", {
   freeMode: true,
   // autoplay: true,
   loop: true,
-  speed: 3000
+  speed: 3000,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  }
 });
 var testimonialContent = new Swiper(".testimonial-comment", {
   spaceBetween: 10,
